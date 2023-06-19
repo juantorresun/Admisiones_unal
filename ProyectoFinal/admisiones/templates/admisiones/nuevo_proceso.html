@@ -1,0 +1,40 @@
+{% extends "base_admin.html" %}
+{% block content %}
+<h1>Nuevo proceso</h1>
+<form  method="post" action="crear_periodo">
+    {% csrf_token %}
+    <label for="año">Año: </label>
+    <input id="año" type="text" name="año" ><br/>
+    <label for="semestre">Semestre: </label>
+     <!--<input id="semestre" type="text" name="semestre" ><br/>-->
+    <select name="semestre" id="semestre">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select><br/>
+    <label for="tipo">Tipo: </label>
+
+
+    <!--<input id="tipo" type="text" name="tipo" ><br/>-->
+    <select name="tipo" id="tipo">
+        <option value="1">Pregrado</option>
+        <option value="2">Postgrado</option>
+    </select><br/>
+    <label for="Estado">Estado: </label>
+
+
+
+    <!--<input id="Estado" type="text" name="Estado" ><br/>-->
+    <select name="Estado" id="Estado">
+        <option value="En curso">En curso</option>
+        <option value="Terminado">Terminado</option>
+    </select><br/>
+    <label for="fecha_inicio">Fecha_inicio: </label>
+    <input id="fecha_inicio" type="text" name="fecha_inicio" ><br/>
+    <label for="fecha_cierre">Fecha_cierre: </label>
+    <input id="fecha_cierre" type="text" name="fecha_cierre" ><br/>
+    <input type="submit" value="Crear">
+</form>
+  
+
+
+  {% endblock %}
